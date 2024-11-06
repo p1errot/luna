@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/luna-design-system",
       "sourceRoot": "projects/luna-design-system/src",
-      "prefix": "lib",
+      "prefix": "luna",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
@@ -28,10 +28,27 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "tsConfig": "projects/luna-design-system/tsconfig.spec.json",
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ]
+            "polyfills": ["zone.js", "zone.js/testing"]
+          }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": "projects/luna-design-system/.storybook",
+            "browserTarget": "luna-design-system:build",
+            "compodoc": true,
+            "compodocArgs": ["-e", "json", "-d", "projects/luna-design-system"],
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": "projects/luna-design-system/.storybook",
+            "browserTarget": "luna-design-system:build",
+            "compodoc": true,
+            "compodocArgs": ["-e", "json", "-d", "projects/luna-design-system"],
+            "outputDir": "storybook-static"
           }
         }
       }
