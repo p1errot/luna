@@ -1,11 +1,11 @@
-import type { Meta, StoryObj } from '@storybook/angular';
 import { fn } from '@storybook/test';
 
 import { ButtonComponent } from './button.component';
 
+import type { Meta, StoryObj } from '@storybook/angular';
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta: Meta<ButtonComponent> = {
-  title: 'Example/Button',
+  title: 'Luna/Button',
   component: ButtonComponent,
   tags: ['autodocs'],
   argTypes: {

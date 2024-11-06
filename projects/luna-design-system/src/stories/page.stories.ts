@@ -3,7 +3,7 @@ import { LunaDesignSystemComponent } from 'luna-design-system';
 
 import type { Meta, StoryObj } from '@storybook/angular';
 const meta: Meta<LunaDesignSystemComponent> = {
-  title: 'Example/LunaDesignSystem',
+  title: 'Luna/LunaDesignSystem',
   component: LunaDesignSystemComponent,
   parameters: {},
 };
